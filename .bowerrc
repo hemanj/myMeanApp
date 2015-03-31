@@ -1,0 +1,6 @@
+{
+	"directory": "public/lib",
+	"proxy":"http://localhost:1540",
+    "https-proxy":"http://localhost:1540",
+	"strict-ssl": false
+}
