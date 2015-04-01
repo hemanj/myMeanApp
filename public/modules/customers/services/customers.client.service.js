@@ -24,7 +24,7 @@ angular.module('customers')
 				$rootScope.$emit(msg,data);
 				
 				console.log('msg sent');
-			}
+			};
 			
 			notify.getMsg = function(msg,func,scope) {
 				var unbind = $rootScope.$on(msg,func);

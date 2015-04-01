@@ -29,7 +29,15 @@ describe('Customer Model Unit Tests:', function() {
 
 		user.save(function() { 
 			customer = new Customer({
-				name: 'Customer Name',
+				firstName: 'Customer Name',
+				surname: 'Customer Name',
+				suburb: 'Customer Name',
+				country: 'Customer Name',
+				industry: 'Customer Name',
+				email: 'Customer Name',
+				phone: 'Customer Name',
+				referred: true,
+				channel: 'Customer Name',
 				user: user
 			});
 
@@ -41,15 +49,6 @@ describe('Customer Model Unit Tests:', function() {
 		it('should be able to save without problems', function(done) {
 			return customer.save(function(err) {
 				should.not.exist(err);
-				done();
-			});
-		});
-
-		it('should be able to show an error when try to save without name', function(done) { 
-			customer.name = '';
-
-			return customer.save(function(err) {
-				should.exist(err);
 				done();
 			});
 		});

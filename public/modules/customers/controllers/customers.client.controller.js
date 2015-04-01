@@ -29,7 +29,7 @@ customersApp.controller('CustomersController', ['$scope', '$stateParams', 'Authe
 			}, function () {
 			  $log.info('Modal dismissed at: ' + new Date());
 			});
-		}
+		};
 		
 		this.modalUpdate = function (size,selectedCustomer) {
 			var modalInstance = $modal.open({
@@ -139,7 +139,7 @@ customersApp.directive('customerList',['Customers','Notify',function(Customers,N
 			//when a customer is added,update the customer list
 			Notify.getMsg('NewCustomer',function(event,data) {
 				scope.customersCtrl.customers = Customers.query();
-			})
+			});
 		}
 	};
 }]);
